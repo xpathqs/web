@@ -58,7 +58,7 @@ publishing {
         create<MavenPublication>("mavenJava") {
             pom {
                 name.set("XpathQS Web")
-                description.set("A library that extends XpathQS-Drveri with HTML semantic")
+                description.set("A library that extends XpathQS-Driver with HTML semantic")
                 url.set("https://xpathqs.org/")
                 licenses {
                     license {
