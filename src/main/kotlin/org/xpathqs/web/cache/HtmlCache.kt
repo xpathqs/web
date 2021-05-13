@@ -9,10 +9,10 @@ import java.io.StringReader
 class HtmlCache : Cache() {
 
     override fun setXml(xml: String, clear: Boolean) {
-        if(xml == "") {
-         //   Log.error("Page Source can't be empty, something went wrong, unable to continue...")
+        if (xml == "") {
+            //   Log.error("Page Source can't be empty, something went wrong, unable to continue...")
         } else {
-          //  Log.log("cache was updated")
+            //  Log.log("cache was updated")
         }
 
         if (this.xml != null) {

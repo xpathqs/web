@@ -7,7 +7,7 @@ import org.xpathqs.web.constants.Global
 open class Page(
     val title: String = "",
     val url: String = ""
-): Block() {
+) : Block() {
     fun open() {
         Global.executor.execute(OpenUrlAction(this))
     }

@@ -14,7 +14,8 @@ import org.xpathqs.web.actions.SubmitAction
 import org.xpathqs.web.driver.IWebDriver
 
 abstract class WebExecutor(
-    override val driver: IWebDriver) : BaseExecutor(driver) {
+    override val driver: IWebDriver
+) : BaseExecutor(driver) {
 
     private val webHandlerCache = ActionExecMap().apply {
         set(ClickAction(Selector()).name) {

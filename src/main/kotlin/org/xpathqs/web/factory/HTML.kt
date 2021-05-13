@@ -285,38 +285,38 @@ object HTML {
     ): Selector {
         var res = tagSelector(tag)
 
-        if(id.isNotEmpty()) {
+        if (id.isNotEmpty()) {
             res = res.id(id)
         }
-        if(idContains.isNotEmpty()) {
+        if (idContains.isNotEmpty()) {
             res = res.id(id, contains = true)
         }
 
-        if(text.isNotEmpty()) {
+        if (text.isNotEmpty()) {
             res = res.text(text)
         }
-        if(textContains.isNotEmpty()) {
+        if (textContains.isNotEmpty()) {
             res = res.text(text, contains = true)
         }
 
-        if(title.isNotEmpty()) {
+        if (title.isNotEmpty()) {
             res = res.arg("@title", title)
         }
-        if(titleContains.isNotEmpty()) {
-            res = res.arg("@title", titleContains , contains = true)
+        if (titleContains.isNotEmpty()) {
+            res = res.arg("@title", titleContains, contains = true)
         }
 
-        if(cls.isNotEmpty()) {
+        if (cls.isNotEmpty()) {
             res = res.arg("@class", cls)
         }
-        if(clsContains.isNotEmpty()) {
+        if (clsContains.isNotEmpty()) {
             res = res.arg("@title", clsContains, contains = true)
         }
 
-        if(type.isNotEmpty()) {
+        if (type.isNotEmpty()) {
             res = res.arg("@type", type)
         }
-        if(typeContains.isNotEmpty()) {
+        if (typeContains.isNotEmpty()) {
             res = res.arg("@type", type, contains = true)
         }
 
