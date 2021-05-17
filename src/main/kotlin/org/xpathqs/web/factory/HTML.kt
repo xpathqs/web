@@ -4,7 +4,9 @@ import org.xpathqs.core.selector.extensions.arg
 import org.xpathqs.core.selector.extensions.id
 import org.xpathqs.core.selector.extensions.text
 import org.xpathqs.core.selector.selector.Selector
+import org.xpathqs.core.selector.selector.SelectorProps
 import org.xpathqs.core.util.SelectorFactory.tagSelector
+import org.xpathqs.driver.selector.SecretInput
 
 object HTML {
     fun div(
@@ -18,7 +20,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        name: String = "",
+        nameContains: String = ""
     ) = tag(
         tag = "div",
 
@@ -32,7 +37,10 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        name = name,
+        nameContains = nameContains
     )
 
     fun input(
@@ -46,7 +54,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        name: String = "",
+        nameContains: String = ""
     ) = tag(
         tag = "input",
 
@@ -60,7 +71,44 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        name = name,
+        nameContains = nameContains
+    )
+
+    fun span(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = "",
+
+        name: String = "",
+        nameContains: String = ""
+    ) = tag(
+        tag = "span",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains,
+
+        name = name,
+        nameContains = nameContains
     )
 
     fun button(
@@ -74,7 +122,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        type: String = "",
+        typeContains: String = ""
     ) = tag(
         tag = "button",
 
@@ -88,7 +139,10 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        type = type,
+        typeContains = typeContains
     )
 
     fun p(
@@ -242,13 +296,8 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = "",
-
-        type: String = "",
-        typeContains: String = ""
-    ) = tag(
-        tag = "h3",
-
+        clsContains: String = ""
+    ) = button(
         id = id,
         idContains = idContains,
 
@@ -261,8 +310,7 @@ object HTML {
         cls = cls,
         clsContains = clsContains,
 
-        type = type,
-        typeContains = typeContains
+        type = "submit"
     )
 
     fun tag(
@@ -281,7 +329,10 @@ object HTML {
         clsContains: String = "",
 
         type: String = "",
-        typeContains: String = ""
+        typeContains: String = "",
+
+        name: String = "",
+        nameContains: String = ""
     ): Selector {
         var res = tagSelector(tag)
 
@@ -318,6 +369,81 @@ object HTML {
         }
         if (typeContains.isNotEmpty()) {
             res = res.arg("@type", type, contains = true)
+        }
+
+        if (name.isNotEmpty()) {
+            res = res.arg("@name", name)
+        }
+        if (nameContains.isNotEmpty()) {
+            res = res.arg("@name", nameContains, contains = true)
+        }
+
+        return res
+    }
+
+    fun secretInput(
+        tag: String = "input",
+
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = "",
+
+        type: String = "",
+        typeContains: String = "",
+
+        name: String = "",
+        nameContains: String = ""
+    ): Selector {
+        var res = SecretInput(props = SelectorProps(tag = tag))
+
+        if (id.isNotEmpty()) {
+            res = res.id(id)
+        }
+        if (idContains.isNotEmpty()) {
+            res = res.id(id, contains = true)
+        }
+
+        if (text.isNotEmpty()) {
+            res = res.text(text)
+        }
+        if (textContains.isNotEmpty()) {
+            res = res.text(text, contains = true)
+        }
+
+        if (title.isNotEmpty()) {
+            res = res.arg("@title", title)
+        }
+        if (titleContains.isNotEmpty()) {
+            res = res.arg("@title", titleContains, contains = true)
+        }
+
+        if (cls.isNotEmpty()) {
+            res = res.arg("@class", cls)
+        }
+        if (clsContains.isNotEmpty()) {
+            res = res.arg("@title", clsContains, contains = true)
+        }
+
+        if (type.isNotEmpty()) {
+            res = res.arg("@type", type)
+        }
+        if (typeContains.isNotEmpty()) {
+            res = res.arg("@type", type, contains = true)
+        }
+
+        if (name.isNotEmpty()) {
+            res = res.arg("@name", name)
+        }
+        if (nameContains.isNotEmpty()) {
+            res = res.arg("@name", nameContains, contains = true)
         }
 
         return res

@@ -1,32 +1,31 @@
 package org.xpathqs.web.cache
 
-
 import org.cyberneko.html.parsers.DOMParser
 import org.xml.sax.InputSource
-import org.xpathqs.driver.cache.Cache
+import org.xpathqs.driver.cache.XmlCache
+import org.xpathqs.driver.cache.evaluator.AttributeEvaluator
+import org.xpathqs.driver.cache.evaluator.CacheEvaluator
+import org.xpathqs.driver.cache.evaluator.Evaluator
+import org.xpathqs.driver.log.Log
 import java.io.StringReader
 
-class HtmlCache : Cache() {
+class HtmlCache : XmlCache() {
 
-    override fun setXml(xml: String, clear: Boolean) {
+    override fun update(xml: String) {
         if (xml == "") {
-            //   Log.error("Page Source can't be empty, something went wrong, unable to continue...")
+            Log.error("Page Source can't be empty, something went wrong, unable to continue...")
         } else {
-            //  Log.log("cache was updated")
-        }
-
-        if (this.xml != null) {
-            this.prevXml = this.xml!!
-        }
-
-        if (clear) {
-            nodesMap.clear()
+            Log.log("cache was updated")
         }
 
         this.xml = xml
 
-        val dp = DOMParser()
-        dp.parse(InputSource(StringReader(xml)))
-        doc = dp.document
+        val parser = DOMParser()
+
+        parser.parse(InputSource(StringReader(xml)))
+        doc = parser.document
+
+        evaluator = CacheEvaluator(Evaluator(doc))
+        attributeEvaluator = AttributeEvaluator(evaluator)
     }
 }

@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-version = "0.0.1"
+version = "0.0.3"
 
 plugins {
     kotlin("jvm") version "1.5.0"
@@ -24,11 +24,13 @@ jacoco {
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
 dependencies {
-    api("org.xpathqs:xpathqs-driver:0.0.2")
+    api("org.xpathqs:xpathqs-core:0.0.3")
+    api("org.xpathqs:xpathqs-driver:0.0.3")
 
     implementation(kotlin("stdlib"))
     implementation("net.sourceforge.nekohtml:nekohtml:1.9.22")
@@ -36,6 +38,7 @@ dependencies {
     testImplementation(kotlin("test-junit5"))
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.0")
+    testImplementation("com.willowtreeapps.assertk:assertk-jvm:0.23.1")
 }
 
 publishing {

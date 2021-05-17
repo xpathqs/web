@@ -6,9 +6,9 @@
 [![License](https://img.shields.io/github/license/nachg/xpathqs-web)](https://github.com/nachg/xpathqs-web/blob/master/LICENSE)
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 
-# Xpath QS Driver
+# Xpath QS Web
 
-Framework for the interaction with drivers for the xpathqs-core
+Framework for the interaction with Web-Based drivers
 
 ## Usage
 
@@ -19,18 +19,18 @@ Apache Maven
 <dependency>
     <groupId>org.xpathqs</groupId>
     <artifactId>xpathqs-web</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.1</version>
 </dependency>
 ```
 
 Gradle Kotlin DSL
 
 ```kotlin
-implementation("org.xpathqs:xpathqs-web:0.0.2")
+implementation("org.xpathqs:xpathqs-web:0.0.1")
 ```
 
 Gradle Groovy DSL
 
 ```groovy
-implementation 'org.xpathqs:xpathqs-web:0.0.2'
+implementation 'org.xpathqs:xpathqs-web:0.0.1'
 ```
