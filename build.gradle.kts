@@ -29,8 +29,8 @@ repositories {
 }
 
 dependencies {
-    api("org.xpathqs:xpathqs-core:+")
-    api("org.xpathqs:xpathqs-driver:+")
+    api("org.xpathqs:xpathqs-core:[0.0.4,)")
+    api("org.xpathqs:xpathqs-driver:[0.0.4,)")
 
     implementation(kotlin("stdlib"))
     implementation("net.sourceforge.nekohtml:nekohtml:1.9.22")
