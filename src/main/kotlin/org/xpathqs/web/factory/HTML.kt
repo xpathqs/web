@@ -340,14 +340,14 @@ object HTML {
             res = res.id(id)
         }
         if (idContains.isNotEmpty()) {
-            res = res.id(id, contains = true)
+            res = res.id(idContains, contains = true)
         }
 
         if (text.isNotEmpty()) {
             res = res.text(text)
         }
         if (textContains.isNotEmpty()) {
-            res = res.text(text, contains = true)
+            res = res.text(textContains, contains = true)
         }
 
         if (title.isNotEmpty()) {
@@ -368,7 +368,7 @@ object HTML {
             res = res.arg("@type", type)
         }
         if (typeContains.isNotEmpty()) {
-            res = res.arg("@type", type, contains = true)
+            res = res.arg("@type", typeContains, contains = true)
         }
 
         if (name.isNotEmpty()) {
@@ -408,14 +408,14 @@ object HTML {
             res = res.id(id)
         }
         if (idContains.isNotEmpty()) {
-            res = res.id(id, contains = true)
+            res = res.id(idContains, contains = true)
         }
 
         if (text.isNotEmpty()) {
             res = res.text(text)
         }
         if (textContains.isNotEmpty()) {
-            res = res.text(text, contains = true)
+            res = res.text(textContains, contains = true)
         }
 
         if (title.isNotEmpty()) {
@@ -436,7 +436,7 @@ object HTML {
             res = res.arg("@type", type)
         }
         if (typeContains.isNotEmpty()) {
-            res = res.arg("@type", type, contains = true)
+            res = res.arg("@type", typeContains, contains = true)
         }
 
         if (name.isNotEmpty()) {
