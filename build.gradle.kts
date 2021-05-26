@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-version = "0.0.4"
+version = "0.0.6"
 
 plugins {
     kotlin("jvm") version "1.5.0"
@@ -15,8 +15,8 @@ plugins {
 java {
     withJavadocJar()
     withSourcesJar()
-    sourceCompatibility = JavaVersion.VERSION_15
-    targetCompatibility = JavaVersion.VERSION_15
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
 
 jacoco {
@@ -31,6 +31,7 @@ repositories {
 dependencies {
     api("org.xpathqs:xpathqs-core:[0.0.4,)")
     api("org.xpathqs:xpathqs-driver:[0.0.4,)")
+    api("org.xpathqs:xpathqs-log:[0.0.1,)")
 
     implementation(kotlin("stdlib"))
     implementation("net.sourceforge.nekohtml:nekohtml:1.9.22")
@@ -98,7 +99,7 @@ tasks.test {
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "15"
+    kotlinOptions.jvmTarget = "11"
 }
 
 tasks.jar {

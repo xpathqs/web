@@ -15,7 +15,7 @@ class HtmlCache : XmlCache() {
         if (xml == "") {
             Log.error("Page Source can't be empty, something went wrong, unable to continue...")
         } else {
-            Log.log("cache was updated")
+            Log.info("cache was updated")
         }
 
         this.xml = xml
