@@ -1,4 +1,5 @@
-import org.xpathqs.core.selector.Block
+
+import org.xpathqs.core.selector.block.Block
 import org.xpathqs.core.selector.extensions.get
 import org.xpathqs.core.selector.extensions.plus
 import org.xpathqs.core.selector.extensions.prefix
@@ -16,29 +17,6 @@ data class ResultModelItem(
     val title: String = "",
     val desc: String = ""
 )
-/*
-open class ModelBlock<T>(
-    val isBlank: Boolean = true,
-    base: ISelector = NullSelector(),
-    props: SelectorProps = SelectorProps(),
-) : Block(isBlank, base, props) {
-    constructor(sel: Selector) : this(
-        isBlank = false,
-        base = sel.base.clone(),
-        props = sel.props.clone()
-    )
-
-
-    open val modelItem: T
-        get() = this as T
-
-    open val modelItems: Collection<T>
-        get() = ArrayList()
-
-    open fun fillFrom(model: T) {
-
-    }
-}*/
 
 object GoogleSearch : Page() {
     val searchInput = HTML.input(title = "Search")

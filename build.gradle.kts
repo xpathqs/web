@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-version = "0.0.6"
+version = "0.1.0"
 
 plugins {
     kotlin("jvm") version "1.5.0"
@@ -29,9 +29,9 @@ repositories {
 }
 
 dependencies {
-    api("org.xpathqs:xpathqs-core:[0.0.4,)")
-    api("org.xpathqs:xpathqs-driver:[0.0.4,)")
-    api("org.xpathqs:xpathqs-log:[0.0.1,)")
+    api("org.xpathqs:core:0.0.7")
+    api("org.xpathqs:driver:0.1.0")
+    api("org.xpathqs:log:0.1.0")
 
     implementation(kotlin("stdlib"))
     implementation("net.sourceforge.nekohtml:nekohtml:1.9.22")
@@ -66,13 +66,13 @@ publishing {
                     }
                 }
                 scm {
-                    connection.set("scm:git:git://github.com/nachg/xpathqs-web.git")
-                    developerConnection.set("scm:git:ssh://github.com/nachg/xpathqs-web.git")
+                    connection.set("scm:git:git://github.com/xpathqs/web.git")
+                    developerConnection.set("scm:git:ssh://github.com/xpathqs/web.git")
                     url.set("https://xpathqs.org/")
                 }
             }
             groupId = "org.xpathqs"
-            artifactId = "xpathqs-web"
+            artifactId = "web"
 
             from(components["java"])
         }
