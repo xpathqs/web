@@ -57,9 +57,89 @@ object HTML {
         clsContains: String = "",
 
         name: String = "",
+        nameContains: String = "",
+
+        type: String = "",
+
+        value: String = "",
+        valueContains: String = ""
+    ) = tag(
+        tag = "input",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains,
+
+        name = name,
+        nameContains = nameContains,
+
+        type = type,
+
+        value = value,
+        valueContains = valueContains
+    )
+
+    fun checkbox(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = "",
+
+        name: String = "",
         nameContains: String = ""
     ) = tag(
         tag = "input",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains,
+
+        name = name,
+        nameContains = nameContains,
+
+        type = "checkbox"
+    )
+
+    fun area(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = "",
+
+        name: String = "",
+        nameContains: String = ""
+    ) = tag(
+        tag = "area",
 
         id = id,
         idContains = idContains,
@@ -91,7 +171,10 @@ object HTML {
         clsContains: String = "",
 
         name: String = "",
-        nameContains: String = ""
+        nameContains: String = "",
+
+        role: String = "",
+        roleContains: String = ""
     ) = tag(
         tag = "span",
 
@@ -108,7 +191,10 @@ object HTML {
         clsContains = clsContains,
 
         name = name,
-        nameContains = nameContains
+        nameContains = nameContains,
+
+        role = role,
+        roleContains = roleContains
     )
 
     fun button(
@@ -285,6 +371,90 @@ object HTML {
         clsContains = clsContains
     )
 
+    fun h4(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "h4",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
+    fun h5(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "h5",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
+    fun h6(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "h6",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
     fun submit(
         id: String = "",
         idContains: String = "",
@@ -313,6 +483,420 @@ object HTML {
         type = "submit"
     )
 
+    fun table(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "table",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
+    fun th(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "th",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
+    fun td(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "td",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
+    fun tr(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "tr",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
+    fun form(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "form",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
+    fun label(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "label",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
+    fun span(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "span",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
+    fun ul(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "ul",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
+    fun li(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "li",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
+    fun ol(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "ol",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
+    fun sup(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "sup",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
+    fun textarea(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = "",
+
+        name: String = "",
+        nameContains: String = "",
+
+        type: String = "",
+
+        value: String = "",
+        valueContains: String = ""
+    ) = tag(
+        tag = "textarea",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains,
+
+        name = name,
+        nameContains = nameContains,
+
+        type = type,
+
+        value = value,
+        valueContains = valueContains
+    )
+
+    fun select(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "select",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
+    fun option(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = "",
+
+        value: String = "",
+        valueContains: String = ""
+    ) = tag(
+        tag = "option",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains,
+
+        value = value,
+        valueContains = valueContains
+    )
+
     fun tag(
         tag: String = "*",
 
@@ -332,7 +916,13 @@ object HTML {
         typeContains: String = "",
 
         name: String = "",
-        nameContains: String = ""
+        nameContains: String = "",
+
+        value: String = "",
+        valueContains: String = "",
+
+        role: String = "",
+        roleContains: String = ""
     ): Selector {
         var res = tagSelector(tag)
 
@@ -361,7 +951,7 @@ object HTML {
             res = res.arg("@class", cls)
         }
         if (clsContains.isNotEmpty()) {
-            res = res.arg("@title", clsContains, contains = true)
+            res = res.arg("@class", clsContains, contains = true)
         }
 
         if (type.isNotEmpty()) {
@@ -376,6 +966,20 @@ object HTML {
         }
         if (nameContains.isNotEmpty()) {
             res = res.arg("@name", nameContains, contains = true)
+        }
+
+        if (value.isNotEmpty()) {
+            res = res.arg("@value", value)
+        }
+        if (valueContains.isNotEmpty()) {
+            res = res.arg("@value", valueContains, contains = true)
+        }
+
+        if (role.isNotEmpty()) {
+            res = res.arg("@role", role)
+        }
+        if (roleContains.isNotEmpty()) {
+            res = res.arg("@role", roleContains, contains = true)
         }
 
         return res
@@ -400,7 +1004,10 @@ object HTML {
         typeContains: String = "",
 
         name: String = "",
-        nameContains: String = ""
+        nameContains: String = "",
+
+        value: String = "",
+        valueContains: String = ""
     ): Selector {
         var res = SecretInput(props = SelectorProps(tag = tag))
 
@@ -429,7 +1036,7 @@ object HTML {
             res = res.arg("@class", cls)
         }
         if (clsContains.isNotEmpty()) {
-            res = res.arg("@title", clsContains, contains = true)
+            res = res.arg("@class", clsContains, contains = true)
         }
 
         if (type.isNotEmpty()) {
@@ -444,6 +1051,13 @@ object HTML {
         }
         if (nameContains.isNotEmpty()) {
             res = res.arg("@name", nameContains, contains = true)
+        }
+
+        if (value.isNotEmpty()) {
+            res = res.arg("@value", value)
+        }
+        if (valueContains.isNotEmpty()) {
+            res = res.arg("@value", valueContains, contains = true)
         }
 
         return res

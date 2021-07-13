@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-version = "0.1.0"
+version = "0.1.1"
 
 plugins {
     kotlin("jvm") version "1.5.0"
@@ -29,9 +29,9 @@ repositories {
 }
 
 dependencies {
-    api("org.xpathqs:core:0.0.7")
-    api("org.xpathqs:driver:0.1.0")
-    api("org.xpathqs:log:0.1.0")
+    api("org.xpathqs:core:0.1.1")
+    api("org.xpathqs:driver:0.1.1")
+    api("org.xpathqs:log:0.1.1")
 
     implementation(kotlin("stdlib"))
     implementation("net.sourceforge.nekohtml:nekohtml:1.9.22")

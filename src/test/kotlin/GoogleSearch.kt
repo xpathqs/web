@@ -1,9 +1,9 @@
 
 import org.xpathqs.core.selector.block.Block
-import org.xpathqs.core.selector.extensions.get
+import org.xpathqs.core.selector.extensions.core.get
 import org.xpathqs.core.selector.extensions.plus
-import org.xpathqs.core.selector.extensions.prefix
 import org.xpathqs.core.selector.extensions.repeat
+import org.xpathqs.core.selector.selector.prefix
 import org.xpathqs.core.util.SelectorFactory.idSelector
 import org.xpathqs.driver.extensions.clear
 import org.xpathqs.driver.extensions.input

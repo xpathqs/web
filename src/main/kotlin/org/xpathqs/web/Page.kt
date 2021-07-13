@@ -13,8 +13,8 @@ import org.xpathqs.web.actions.OpenUrlAction
 import org.xpathqs.web.constants.Global
 
 open class Page(
-    val title: String = "",
-    val url: String = "",
+    open val title: String = "",
+    open val url: String = "",
     base: ISelector = NullSelector()
 ) : Block(base) {
 

@@ -2,7 +2,7 @@ import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
 
 import org.xpathqs.core.selector.base.ISelector
-import org.xpathqs.core.selector.extensions.get
+import org.xpathqs.core.selector.extensions.core.get
 import kotlin.test.assertEquals
 
 class SelectorTests {
