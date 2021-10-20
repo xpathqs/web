@@ -7,10 +7,12 @@ import org.xpathqs.driver.actions.InputAction
 import org.xpathqs.driver.executor.ActionExecMap
 import org.xpathqs.driver.executor.Decorator
 import org.xpathqs.driver.executor.IExecutor
-import org.xpathqs.web.Page
+import org.xpathqs.driver.navigation.base.ILoadable
+import org.xpathqs.web.WebPage
 import org.xpathqs.web.actions.OpenUrlAction
 import org.xpathqs.web.actions.SubmitAction
 import org.xpathqs.web.driver.IWebDriver
+import java.time.Duration
 
 open class WebExecutor(
     override val driver: IWebDriver,
@@ -24,7 +26,7 @@ open class WebExecutor(
         set(InputAction("", Selector()).name) {
             executeAction(it as InputAction)
         }
-        set(OpenUrlAction(Page()).name) {
+        set(OpenUrlAction(WebPage()).name) {
             executeAction(it as OpenUrlAction)
         }
         set(ClearAction(Selector()).name) {
@@ -48,6 +50,7 @@ open class WebExecutor(
 
     protected open fun executeAction(action: OpenUrlAction) {
         driver.open(action.page.url)
+        (action.page as? ILoadable)?.waitForLoad(Duration.ofSeconds(30))
     }
 
     protected open fun executeAction(action: ClearAction) {

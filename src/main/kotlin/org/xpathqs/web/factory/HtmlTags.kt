@@ -1,8 +1,12 @@
 package org.xpathqs.web.factory
 
 import org.xpathqs.core.selector.selector.Selector
+import org.xpathqs.core.util.SelectorFactory.tagSelector
 
 object HtmlTags {
+    val ANY: Selector
+        get() = tagSelector()
+
     val DIV: Selector
         get() = HTML.div()
 
@@ -60,6 +64,12 @@ object HtmlTags {
     val TABLE: Selector
         get() = HTML.table()
 
+    val THEAD: Selector
+        get() = HTML.thead()
+
+    val TBODY: Selector
+        get() = HTML.tbody()
+
     val TD: Selector
         get() = HTML.td()
 
@@ -86,4 +96,10 @@ object HtmlTags {
 
     val OPTION: Selector
         get() = HTML.option()
+
+    val HEADER: Selector
+        get() = HTML.header()
+
+    val FOOTER: Selector
+        get() = HTML.footer()
 }

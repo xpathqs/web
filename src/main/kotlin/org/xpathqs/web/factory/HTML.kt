@@ -1,11 +1,14 @@
 package org.xpathqs.web.factory
 
 import org.xpathqs.core.selector.extensions.arg
+import org.xpathqs.core.selector.extensions.core.get
 import org.xpathqs.core.selector.extensions.id
 import org.xpathqs.core.selector.extensions.text
 import org.xpathqs.core.selector.selector.Selector
 import org.xpathqs.core.selector.selector.SelectorProps
 import org.xpathqs.core.util.SelectorFactory.tagSelector
+import org.xpathqs.core.util.SelectorFactory.textContainsSelector
+import org.xpathqs.core.util.SelectorFactory.textSelector
 import org.xpathqs.driver.selector.SecretInput
 
 object HTML {
@@ -15,6 +18,9 @@ object HTML {
 
         text: String = "",
         textContains: String = "",
+
+        innerText: String = "",
+        innerTextContains: String = "",
 
         title: String = "",
         titleContains: String = "",
@@ -33,6 +39,9 @@ object HTML {
         text = text,
         textContains = textContains,
 
+        innerText = innerText,
+        innerTextContains = innerTextContains,
+
         title = title,
         titleContains = titleContains,
 
@@ -50,6 +59,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -62,7 +74,10 @@ object HTML {
         type: String = "",
 
         value: String = "",
-        valueContains: String = ""
+        valueContains: String = "",
+
+        placeHolder: String = "",
+        placeHolderContains: String = "",
     ) = tag(
         tag = "input",
 
@@ -71,6 +86,9 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -84,7 +102,10 @@ object HTML {
         type = type,
 
         value = value,
-        valueContains = valueContains
+        valueContains = valueContains,
+
+        placeHolder = placeHolder,
+        placeHolderContains = placeHolderContains
     )
 
     fun checkbox(
@@ -93,6 +114,9 @@ object HTML {
 
         text: String = "",
         textContains: String = "",
+
+        innerText: String = "",
+        innerTextContains: String = "",
 
         title: String = "",
         titleContains: String = "",
@@ -110,6 +134,9 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -130,6 +157,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -147,6 +177,9 @@ object HTML {
         text = text,
         textContains = textContains,
 
+        innerText = innerText,
+        innerTextContains = innerTextContains,
+
         title = title,
         titleContains = titleContains,
 
@@ -163,6 +196,9 @@ object HTML {
 
         text: String = "",
         textContains: String = "",
+
+        innerText: String = "",
+        innerTextContains: String = "",
 
         title: String = "",
         titleContains: String = "",
@@ -184,6 +220,9 @@ object HTML {
         text = text,
         textContains = textContains,
 
+        innerText = innerText,
+        innerTextContains = innerTextContains,
+
         title = title,
         titleContains = titleContains,
 
@@ -204,6 +243,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -220,6 +262,9 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -238,6 +283,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -251,6 +299,9 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -266,6 +317,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -279,6 +333,9 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -294,6 +351,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -307,6 +367,9 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -322,6 +385,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -335,6 +401,9 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -350,6 +419,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -363,6 +435,9 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -378,6 +453,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -391,6 +469,9 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -406,6 +487,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -419,6 +503,9 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -434,6 +521,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -447,6 +537,9 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -462,6 +555,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -473,6 +569,9 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -487,9 +586,6 @@ object HTML {
         id: String = "",
         idContains: String = "",
 
-        text: String = "",
-        textContains: String = "",
-
         title: String = "",
         titleContains: String = "",
 
@@ -501,8 +597,49 @@ object HTML {
         id = id,
         idContains = idContains,
 
-        text = text,
-        textContains = textContains,
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
+    fun thead(
+        id: String = "",
+        idContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "thead",
+
+        id = id,
+        idContains = idContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains
+    )
+
+    fun tbody(
+        id: String = "",
+        idContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = ""
+    ) = tag(
+        tag = "tbody",
+
+        id = id,
+        idContains = idContains,
 
         title = title,
         titleContains = titleContains,
@@ -518,6 +655,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -531,6 +671,9 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -546,6 +689,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -559,6 +705,9 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -574,6 +723,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -588,6 +740,9 @@ object HTML {
         text = text,
         textContains = textContains,
 
+        innerText = innerText,
+        innerTextContains = innerTextContains,
+
         title = title,
         titleContains = titleContains,
 
@@ -599,29 +754,33 @@ object HTML {
         id: String = "",
         idContains: String = "",
 
-        text: String = "",
-        textContains: String = "",
-
-        title: String = "",
-        titleContains: String = "",
-
         cls: String = "",
-        clsContains: String = ""
-    ) = tag(
-        tag = "form",
+        clsContains: String = "",
 
-        id = id,
-        idContains = idContains,
+        action: String = "",
+        enctype: String = "",
+        method: String = "",
+        name: String = "",
+        target: String = ""
+    ) : Selector {
+        var res = tagSelector("form")
 
-        text = text,
-        textContains = textContains,
+        if (id.isNotEmpty()) {
+            res = res.id(id)
+        }
+        if (idContains.isNotEmpty()) {
+            res = res.id(idContains, contains = true)
+        }
 
-        title = title,
-        titleContains = titleContains,
-
-        cls = cls,
-        clsContains = clsContains
-    )
+        res = res.withArg("class", cls)
+        res = res.withArgContains("class", clsContains)
+        res = res.withArg("action", action)
+        res = res.withArg("enctype", enctype)
+        res = res.withArg("method", method)
+        res = res.withArg("name", name)
+        res = res.withArg("target", target)
+        return res
+    }
 
     fun label(
         id: String = "",
@@ -629,6 +788,9 @@ object HTML {
 
         text: String = "",
         textContains: String = "",
+
+        innerText: String = "",
+        innerTextContains: String = "",
 
         title: String = "",
         titleContains: String = "",
@@ -651,40 +813,15 @@ object HTML {
         clsContains = clsContains
     )
 
-    fun span(
-        id: String = "",
-        idContains: String = "",
-
-        text: String = "",
-        textContains: String = "",
-
-        title: String = "",
-        titleContains: String = "",
-
-        cls: String = "",
-        clsContains: String = ""
-    ) = tag(
-        tag = "span",
-
-        id = id,
-        idContains = idContains,
-
-        text = text,
-        textContains = textContains,
-
-        title = title,
-        titleContains = titleContains,
-
-        cls = cls,
-        clsContains = clsContains
-    )
-
     fun ul(
         id: String = "",
         idContains: String = "",
 
         text: String = "",
         textContains: String = "",
+
+        innerText: String = "",
+        innerTextContains: String = "",
 
         title: String = "",
         titleContains: String = "",
@@ -700,6 +837,9 @@ object HTML {
         text = text,
         textContains = textContains,
 
+        innerText = innerText,
+        innerTextContains = innerTextContains,
+
         title = title,
         titleContains = titleContains,
 
@@ -713,6 +853,9 @@ object HTML {
 
         text: String = "",
         textContains: String = "",
+
+        innerText: String = "",
+        innerTextContains: String = "",
 
         title: String = "",
         titleContains: String = "",
@@ -728,6 +871,9 @@ object HTML {
         text = text,
         textContains = textContains,
 
+        innerText = innerText,
+        innerTextContains = innerTextContains,
+
         title = title,
         titleContains = titleContains,
 
@@ -741,6 +887,9 @@ object HTML {
 
         text: String = "",
         textContains: String = "",
+
+        innerText: String = "",
+        innerTextContains: String = "",
 
         title: String = "",
         titleContains: String = "",
@@ -756,6 +905,9 @@ object HTML {
         text = text,
         textContains = textContains,
 
+        innerText = innerText,
+        innerTextContains = innerTextContains,
+
         title = title,
         titleContains = titleContains,
 
@@ -770,6 +922,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -783,6 +938,9 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -800,6 +958,9 @@ object HTML {
 
         title: String = "",
         titleContains: String = "",
+
+        innerText: String = "",
+        innerTextContains: String = "",
 
         cls: String = "",
         clsContains: String = "",
@@ -819,6 +980,9 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -842,6 +1006,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -856,6 +1023,9 @@ object HTML {
         text = text,
         textContains = textContains,
 
+        innerText = innerText,
+        innerTextContains = innerTextContains,
+
         title = title,
         titleContains = titleContains,
 
@@ -869,6 +1039,9 @@ object HTML {
 
         text: String = "",
         textContains: String = "",
+
+        innerText: String = "",
+        innerTextContains: String = "",
 
         title: String = "",
         titleContains: String = "",
@@ -886,6 +1059,89 @@ object HTML {
 
         text = text,
         textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains,
+
+        value = value,
+        valueContains = valueContains
+    )
+
+    fun header(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        innerText: String = "",
+        innerTextContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = "",
+
+        value: String = "",
+        valueContains: String = ""
+    ) = tag(
+        tag = "header",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
+
+        title = title,
+        titleContains = titleContains,
+
+        cls = cls,
+        clsContains = clsContains,
+
+        value = value,
+        valueContains = valueContains
+    )
+
+    fun footer(
+        id: String = "",
+        idContains: String = "",
+
+        text: String = "",
+        textContains: String = "",
+
+        innerText: String = "",
+        innerTextContains: String = "",
+
+        title: String = "",
+        titleContains: String = "",
+
+        cls: String = "",
+        clsContains: String = "",
+
+        value: String = "",
+        valueContains: String = ""
+    ) = tag(
+        tag = "footer",
+
+        id = id,
+        idContains = idContains,
+
+        text = text,
+        textContains = textContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
 
         title = title,
         titleContains = titleContains,
@@ -906,6 +1162,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -922,7 +1181,10 @@ object HTML {
         valueContains: String = "",
 
         role: String = "",
-        roleContains: String = ""
+        roleContains: String = "",
+
+        placeHolder: String = "",
+        placeHolderContains: String = "",
     ): Selector {
         var res = tagSelector(tag)
 
@@ -938,6 +1200,13 @@ object HTML {
         }
         if (textContains.isNotEmpty()) {
             res = res.text(textContains, contains = true)
+        }
+
+        if (innerText.isNotEmpty()) {
+            res = res[textSelector(innerText)]
+        }
+        if (innerTextContains.isNotEmpty()) {
+            res = res[textContainsSelector(innerTextContains)]
         }
 
         if (title.isNotEmpty()) {
@@ -966,6 +1235,13 @@ object HTML {
         }
         if (nameContains.isNotEmpty()) {
             res = res.arg("@name", nameContains, contains = true)
+        }
+
+        if (placeHolder.isNotEmpty()) {
+            res = res.arg("@placeholder", placeHolder)
+        }
+        if (placeHolderContains.isNotEmpty()) {
+            res = res.arg("@placeholder", placeHolderContains, contains = true)
         }
 
         if (value.isNotEmpty()) {
@@ -994,6 +1270,9 @@ object HTML {
         text: String = "",
         textContains: String = "",
 
+        innerText: String = "",
+        innerTextContains: String = "",
+
         title: String = "",
         titleContains: String = "",
 
@@ -1007,7 +1286,10 @@ object HTML {
         nameContains: String = "",
 
         value: String = "",
-        valueContains: String = ""
+        valueContains: String = "",
+
+        placeHolder: String = "",
+        placeHolderContains: String = "",
     ): Selector {
         var res = SecretInput(props = SelectorProps(tag = tag))
 
@@ -1023,6 +1305,13 @@ object HTML {
         }
         if (textContains.isNotEmpty()) {
             res = res.text(textContains, contains = true)
+        }
+
+        if (innerText.isNotEmpty()) {
+            res = res[textSelector(innerText)]
+        }
+        if (innerTextContains.isNotEmpty()) {
+            res = res[textContainsSelector(innerTextContains)]
         }
 
         if (title.isNotEmpty()) {
@@ -1060,6 +1349,27 @@ object HTML {
             res = res.arg("@value", valueContains, contains = true)
         }
 
+        if (placeHolder.isNotEmpty()) {
+            res = res.arg("@placeholder", placeHolder)
+        }
+        if (placeHolderContains.isNotEmpty()) {
+            res = res.arg("@placeholder", placeHolderContains, contains = true)
+        }
+
         return res
+    }
+
+    private fun Selector.withArgContains(name: String, value: String): Selector {
+        if(value.isNotEmpty()) {
+            this.arg("@$name", value, contains = true)
+        }
+        return this
+    }
+
+    private fun Selector.withArg(name: String, value: String): Selector {
+        if(value.isNotEmpty()) {
+            this.arg("@$name", value)
+        }
+        return this
     }
 }

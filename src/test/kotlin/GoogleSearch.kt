@@ -7,7 +7,7 @@ import org.xpathqs.core.selector.selector.prefix
 import org.xpathqs.core.util.SelectorFactory.idSelector
 import org.xpathqs.driver.extensions.clear
 import org.xpathqs.driver.extensions.input
-import org.xpathqs.web.Page
+import org.xpathqs.driver.page.Page
 import org.xpathqs.web.extensions.submit
 import org.xpathqs.web.factory.HTML
 import org.xpathqs.web.factory.HtmlTags.DIV
