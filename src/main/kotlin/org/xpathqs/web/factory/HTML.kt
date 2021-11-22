@@ -6,9 +6,12 @@ import org.xpathqs.core.selector.extensions.id
 import org.xpathqs.core.selector.extensions.text
 import org.xpathqs.core.selector.selector.Selector
 import org.xpathqs.core.selector.selector.SelectorProps
+import org.xpathqs.core.selector.selector.preceding
+import org.xpathqs.core.selector.selector.prefix
 import org.xpathqs.core.util.SelectorFactory.tagSelector
 import org.xpathqs.core.util.SelectorFactory.textContainsSelector
 import org.xpathqs.core.util.SelectorFactory.textSelector
+import org.xpathqs.driver.extensions.near
 import org.xpathqs.driver.selector.SecretInput
 
 object HTML {
@@ -29,7 +32,11 @@ object HTML {
         clsContains: String = "",
 
         name: String = "",
-        nameContains: String = ""
+        nameContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
+
     ) = tag(
         tag = "div",
 
@@ -49,7 +56,10 @@ object HTML {
         clsContains = clsContains,
 
         name = name,
-        nameContains = nameContains
+        nameContains = nameContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains
     )
 
     fun input(
@@ -78,6 +88,9 @@ object HTML {
 
         placeHolder: String = "",
         placeHolderContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "input",
 
@@ -105,7 +118,10 @@ object HTML {
         valueContains = valueContains,
 
         placeHolder = placeHolder,
-        placeHolderContains = placeHolderContains
+        placeHolderContains = placeHolderContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains
     )
 
     fun checkbox(
@@ -125,7 +141,10 @@ object HTML {
         clsContains: String = "",
 
         name: String = "",
-        nameContains: String = ""
+        nameContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "input",
 
@@ -147,6 +166,9 @@ object HTML {
         name = name,
         nameContains = nameContains,
 
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
+
         type = "checkbox"
     )
 
@@ -167,7 +189,10 @@ object HTML {
         clsContains: String = "",
 
         name: String = "",
-        nameContains: String = ""
+        nameContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "area",
 
@@ -187,7 +212,10 @@ object HTML {
         clsContains = clsContains,
 
         name = name,
-        nameContains = nameContains
+        nameContains = nameContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun span(
@@ -210,7 +238,10 @@ object HTML {
         nameContains: String = "",
 
         role: String = "",
-        roleContains: String = ""
+        roleContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "span",
 
@@ -233,7 +264,10 @@ object HTML {
         nameContains = nameContains,
 
         role = role,
-        roleContains = roleContains
+        roleContains = roleContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun button(
@@ -253,7 +287,10 @@ object HTML {
         clsContains: String = "",
 
         type: String = "",
-        typeContains: String = ""
+        typeContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "button",
 
@@ -273,7 +310,10 @@ object HTML {
         clsContains = clsContains,
 
         type = type,
-        typeContains = typeContains
+        typeContains = typeContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun p(
@@ -290,7 +330,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "p",
 
@@ -307,7 +350,10 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun a(
@@ -324,7 +370,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "a",
 
@@ -341,7 +390,10 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun h1(
@@ -358,7 +410,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "h1",
 
@@ -375,7 +430,10 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun h2(
@@ -392,9 +450,12 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
-        tag = "h1",
+        tag = "h2",
 
         id = id,
         idContains = idContains,
@@ -409,7 +470,10 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun h3(
@@ -426,7 +490,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "h3",
 
@@ -443,7 +510,10 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun h4(
@@ -460,7 +530,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "h4",
 
@@ -477,7 +550,10 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun h5(
@@ -494,7 +570,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "h5",
 
@@ -511,7 +590,10 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun h6(
@@ -528,7 +610,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "h6",
 
@@ -545,7 +630,10 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun submit(
@@ -562,7 +650,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = button(
         id = id,
         idContains = idContains,
@@ -579,6 +670,9 @@ object HTML {
         cls = cls,
         clsContains = clsContains,
 
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
+
         type = "submit"
     )
 
@@ -590,7 +684,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "table",
 
@@ -601,7 +698,10 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun thead(
@@ -623,7 +723,7 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
     )
 
     fun tbody(
@@ -761,7 +861,10 @@ object HTML {
         enctype: String = "",
         method: String = "",
         name: String = "",
-        target: String = ""
+        target: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) : Selector {
         var res = tagSelector("form")
 
@@ -796,7 +899,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "label",
 
@@ -810,7 +916,13 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        innerText = innerText,
+        innerTextContains = innerTextContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun ul(
@@ -827,7 +939,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "ul",
 
@@ -844,7 +959,10 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun li(
@@ -861,7 +979,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "li",
 
@@ -878,7 +999,10 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun ol(
@@ -895,7 +1019,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "ol",
 
@@ -912,7 +1039,10 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun sup(
@@ -929,7 +1059,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "sup",
 
@@ -946,7 +1079,10 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun textarea(
@@ -971,7 +1107,10 @@ object HTML {
         type: String = "",
 
         value: String = "",
-        valueContains: String = ""
+        valueContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "textarea",
 
@@ -996,7 +1135,10 @@ object HTML {
         type = type,
 
         value = value,
-        valueContains = valueContains
+        valueContains = valueContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun select(
@@ -1013,7 +1155,10 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "select",
 
@@ -1030,7 +1175,10 @@ object HTML {
         titleContains = titleContains,
 
         cls = cls,
-        clsContains = clsContains
+        clsContains = clsContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun option(
@@ -1050,7 +1198,10 @@ object HTML {
         clsContains: String = "",
 
         value: String = "",
-        valueContains: String = ""
+        valueContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "option",
 
@@ -1070,7 +1221,10 @@ object HTML {
         clsContains = clsContains,
 
         value = value,
-        valueContains = valueContains
+        valueContains = valueContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun header(
@@ -1090,7 +1244,10 @@ object HTML {
         clsContains: String = "",
 
         value: String = "",
-        valueContains: String = ""
+        valueContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "header",
 
@@ -1110,7 +1267,10 @@ object HTML {
         clsContains = clsContains,
 
         value = value,
-        valueContains = valueContains
+        valueContains = valueContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun footer(
@@ -1130,7 +1290,10 @@ object HTML {
         clsContains: String = "",
 
         value: String = "",
-        valueContains: String = ""
+        valueContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = ""
     ) = tag(
         tag = "footer",
 
@@ -1150,7 +1313,10 @@ object HTML {
         clsContains = clsContains,
 
         value = value,
-        valueContains = valueContains
+        valueContains = valueContains,
+
+        nearestText = nearestText,
+        nearestTextContains = nearestTextContains,
     )
 
     fun tag(
@@ -1185,6 +1351,9 @@ object HTML {
 
         placeHolder: String = "",
         placeHolderContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = "",
     ): Selector {
         var res = tagSelector(tag)
 
@@ -1258,6 +1427,14 @@ object HTML {
             res = res.arg("@role", roleContains, contains = true)
         }
 
+        if(nearestText.isNotEmpty()) {
+            //return res near textSelector(nearestText)
+            return res[textSelector(nearestText).preceding()]
+        }
+        if(nearestTextContains.isNotEmpty()) {
+            //return res near textContainsSelector(nearestTextContains)
+            return res[textContainsSelector(nearestText).preceding()]
+        }
         return res
     }
 
@@ -1290,6 +1467,9 @@ object HTML {
 
         placeHolder: String = "",
         placeHolderContains: String = "",
+
+        nearestText: String = "",
+        nearestTextContains: String = "",
     ): Selector {
         var res = SecretInput(props = SelectorProps(tag = tag))
 
@@ -1308,10 +1488,10 @@ object HTML {
         }
 
         if (innerText.isNotEmpty()) {
-            res = res[textSelector(innerText)]
+            res = res[textSelector(innerText).prefix(".//")]
         }
         if (innerTextContains.isNotEmpty()) {
-            res = res[textContainsSelector(innerTextContains)]
+            res = res[textContainsSelector(innerTextContains).prefix(".//")]
         }
 
         if (title.isNotEmpty()) {
@@ -1354,6 +1534,15 @@ object HTML {
         }
         if (placeHolderContains.isNotEmpty()) {
             res = res.arg("@placeholder", placeHolderContains, contains = true)
+        }
+
+        if(nearestText.isNotEmpty()) {
+            //return res near textSelector(nearestText)
+            return res[textSelector(nearestText).preceding()]
+        }
+        if(nearestTextContains.isNotEmpty()) {
+            //return res near textContainsSelector(nearestTextContains)
+            return res[textContainsSelector(nearestText).preceding()]
         }
 
         return res

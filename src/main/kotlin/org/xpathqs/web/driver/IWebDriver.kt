@@ -6,4 +6,5 @@ import org.xpathqs.driver.IDriver
 interface IWebDriver : IDriver {
     fun open(url: String)
     fun submit(selector: ISelector)
+    fun switchTab()
 }

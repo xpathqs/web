@@ -4,6 +4,7 @@ import org.xpathqs.core.selector.selector.Selector
 import org.xpathqs.driver.actions.ClearAction
 import org.xpathqs.driver.actions.ClickAction
 import org.xpathqs.driver.actions.InputAction
+import org.xpathqs.driver.actions.SwitchTabAction
 import org.xpathqs.driver.executor.ActionExecMap
 import org.xpathqs.driver.executor.Decorator
 import org.xpathqs.driver.executor.IExecutor
@@ -35,6 +36,9 @@ open class WebExecutor(
         set(SubmitAction(Selector()).name) {
             executeAction(it as SubmitAction)
         }
+        set(SwitchTabAction().name) {
+            executeAction(it as SwitchTabAction)
+        }
     }
 
     protected open fun executeAction(action: ClickAction) {
@@ -59,5 +63,9 @@ open class WebExecutor(
 
     protected open fun executeAction(action: SubmitAction) {
         driver.submit(action.on)
+    }
+
+    protected open fun executeAction(action: SwitchTabAction) {
+        driver.switchTab()
     }
 }
