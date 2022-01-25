@@ -1,10 +1,7 @@
 package org.xpathqs.web.executor
 
 import org.xpathqs.core.selector.selector.Selector
-import org.xpathqs.driver.actions.ClearAction
-import org.xpathqs.driver.actions.ClickAction
-import org.xpathqs.driver.actions.InputAction
-import org.xpathqs.driver.actions.SwitchTabAction
+import org.xpathqs.driver.actions.*
 import org.xpathqs.driver.executor.ActionExecMap
 import org.xpathqs.driver.executor.Decorator
 import org.xpathqs.driver.executor.IExecutor
@@ -24,7 +21,13 @@ open class WebExecutor(
         set(ClickAction(Selector()).name) {
             executeAction(it as ClickAction)
         }
+        set(InputFileAction("", Selector()).name) {
+            executeAction(it as InputAction)
+        }
         set(InputAction("", Selector()).name) {
+            executeAction(it as InputAction)
+        }
+        set(InputFileAction("", Selector()).name) {
             executeAction(it as InputAction)
         }
         set(OpenUrlAction(WebPage()).name) {
@@ -43,6 +46,10 @@ open class WebExecutor(
 
     protected open fun executeAction(action: ClickAction) {
         driver.click(action.on)
+    }
+
+    protected open fun executeAction(action: InputFileAction) {
+        driver.input(action.on, action.text)
     }
 
     protected open fun executeAction(action: InputAction) {

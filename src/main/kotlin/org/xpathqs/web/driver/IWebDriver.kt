@@ -1,7 +1,7 @@
 package org.xpathqs.web.driver
 
 import org.xpathqs.core.selector.base.ISelector
-import org.xpathqs.driver.IDriver
+import org.xpathqs.driver.core.IDriver
 
 interface IWebDriver : IDriver {
     fun open(url: String)

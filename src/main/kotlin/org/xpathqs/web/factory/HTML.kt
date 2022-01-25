@@ -1,9 +1,7 @@
 package org.xpathqs.web.factory
 
-import org.xpathqs.core.selector.extensions.arg
+import org.xpathqs.core.selector.extensions.*
 import org.xpathqs.core.selector.extensions.core.get
-import org.xpathqs.core.selector.extensions.id
-import org.xpathqs.core.selector.extensions.text
 import org.xpathqs.core.selector.selector.Selector
 import org.xpathqs.core.selector.selector.SelectorProps
 import org.xpathqs.core.selector.selector.preceding
@@ -1429,11 +1427,11 @@ object HTML {
 
         if(nearestText.isNotEmpty()) {
             //return res near textSelector(nearestText)
-            return res[textSelector(nearestText).preceding()]
+            return res contains textSelector(nearestText).preceding()
         }
         if(nearestTextContains.isNotEmpty()) {
             //return res near textContainsSelector(nearestTextContains)
-            return res[textContainsSelector(nearestText).preceding()]
+            return res containsAny textContainsSelector(nearestTextContains).preceding()
         }
         return res
     }
