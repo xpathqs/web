@@ -33,8 +33,10 @@ object HTML {
         nameContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
 
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "div",
 
@@ -57,7 +59,10 @@ object HTML {
         nameContains = nameContains,
 
         nearestText = nearestText,
-        nearestTextContains = nearestTextContains
+        nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains
     )
 
     fun input(
@@ -88,7 +93,10 @@ object HTML {
         placeHolderContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "input",
 
@@ -119,7 +127,10 @@ object HTML {
         placeHolderContains = placeHolderContains,
 
         nearestText = nearestText,
-        nearestTextContains = nearestTextContains
+        nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains
     )
 
     fun checkbox(
@@ -142,7 +153,10 @@ object HTML {
         nameContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "input",
 
@@ -167,6 +181,9 @@ object HTML {
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
 
+        testId = testId,
+        testIdContains = testIdContains,
+
         type = "checkbox"
     )
 
@@ -190,7 +207,10 @@ object HTML {
         nameContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "area",
 
@@ -214,6 +234,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun span(
@@ -239,7 +262,10 @@ object HTML {
         roleContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "span",
 
@@ -266,6 +292,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun button(
@@ -288,7 +317,10 @@ object HTML {
         typeContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "button",
 
@@ -312,6 +344,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun p(
@@ -331,7 +366,10 @@ object HTML {
         clsContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "p",
 
@@ -352,6 +390,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun a(
@@ -371,7 +412,10 @@ object HTML {
         clsContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "a",
 
@@ -392,6 +436,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun h1(
@@ -411,7 +458,10 @@ object HTML {
         clsContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = "",
     ) = tag(
         tag = "h1",
 
@@ -432,6 +482,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun h2(
@@ -451,7 +504,10 @@ object HTML {
         clsContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "h2",
 
@@ -472,6 +528,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun h3(
@@ -491,7 +550,10 @@ object HTML {
         clsContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "h3",
 
@@ -512,6 +574,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun h4(
@@ -531,7 +596,10 @@ object HTML {
         clsContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "h4",
 
@@ -552,6 +620,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun h5(
@@ -571,7 +642,10 @@ object HTML {
         clsContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "h5",
 
@@ -592,6 +666,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun h6(
@@ -611,7 +688,10 @@ object HTML {
         clsContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "h6",
 
@@ -632,6 +712,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun submit(
@@ -651,7 +734,10 @@ object HTML {
         clsContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = button(
         id = id,
         idContains = idContains,
@@ -671,7 +757,10 @@ object HTML {
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
 
-        type = "submit"
+        testId = testId,
+        testIdContains = testIdContains,
+
+        type = "submit",
     )
 
     fun table(
@@ -685,7 +774,10 @@ object HTML {
         clsContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "table",
 
@@ -700,6 +792,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun thead(
@@ -710,7 +805,7 @@ object HTML {
         titleContains: String = "",
 
         cls: String = "",
-        clsContains: String = ""
+        clsContains: String = "",
     ) = tag(
         tag = "thead",
 
@@ -862,7 +957,10 @@ object HTML {
         target: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) : Selector {
         var res = tagSelector("form")
 
@@ -880,6 +978,9 @@ object HTML {
         res = res.withArg("method", method)
         res = res.withArg("name", name)
         res = res.withArg("target", target)
+        res = res.withArg("data-testid", testId)
+        res = res.withArgContains("data-testid", testIdContains)
+
         return res
     }
 
@@ -900,7 +1001,10 @@ object HTML {
         clsContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "label",
 
@@ -921,6 +1025,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun ul(
@@ -940,7 +1047,10 @@ object HTML {
         clsContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "ul",
 
@@ -961,6 +1071,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun li(
@@ -980,7 +1093,10 @@ object HTML {
         clsContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "li",
 
@@ -1001,6 +1117,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun ol(
@@ -1020,7 +1139,10 @@ object HTML {
         clsContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "ol",
 
@@ -1041,6 +1163,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun sup(
@@ -1156,7 +1281,10 @@ object HTML {
         clsContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "select",
 
@@ -1177,6 +1305,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun option(
@@ -1199,7 +1330,10 @@ object HTML {
         valueContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "option",
 
@@ -1223,6 +1357,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun header(
@@ -1245,7 +1382,10 @@ object HTML {
         valueContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "header",
 
@@ -1269,6 +1409,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun footer(
@@ -1291,7 +1434,10 @@ object HTML {
         valueContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ) = tag(
         tag = "footer",
 
@@ -1315,6 +1461,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun tag(
@@ -1352,6 +1501,9 @@ object HTML {
 
         nearestText: String = "",
         nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ): Selector {
         var res = tagSelector(tag)
 
@@ -1370,10 +1522,10 @@ object HTML {
         }
 
         if (innerText.isNotEmpty()) {
-            res = res[textSelector(innerText)]
+            res = res containsAny textSelector(innerText)
         }
         if (innerTextContains.isNotEmpty()) {
-            res = res[textContainsSelector(innerTextContains)]
+            res = res containsAny textContainsSelector(innerTextContains)
         }
 
         if (title.isNotEmpty()) {
@@ -1427,11 +1579,18 @@ object HTML {
 
         if(nearestText.isNotEmpty()) {
             //return res near textSelector(nearestText)
-            return res contains textSelector(nearestText).preceding()
+            res = res contains textSelector(nearestText).preceding()
         }
         if(nearestTextContains.isNotEmpty()) {
             //return res near textContainsSelector(nearestTextContains)
-            return res containsAny textContainsSelector(nearestTextContains).preceding()
+            res = res containsAny textContainsSelector(nearestTextContains).preceding()
+        }
+
+        if (testId.isNotEmpty()) {
+            res = res.arg("@data-testid", testId)
+        }
+        if (testIdContains.isNotEmpty()) {
+            res = res.arg("@data-testid", testIdContains, contains = true)
         }
         return res
     }
@@ -1486,10 +1645,10 @@ object HTML {
         }
 
         if (innerText.isNotEmpty()) {
-            res = res[textSelector(innerText).prefix(".//")]
+            res = res contains textSelector(innerText)
         }
         if (innerTextContains.isNotEmpty()) {
-            res = res[textContainsSelector(innerTextContains).prefix(".//")]
+            res = res contains textContainsSelector(innerTextContains)
         }
 
         if (title.isNotEmpty()) {
@@ -1536,11 +1695,11 @@ object HTML {
 
         if(nearestText.isNotEmpty()) {
             //return res near textSelector(nearestText)
-            return res[textSelector(nearestText).preceding()]
+            res = res[textSelector(nearestText).preceding()]
         }
         if(nearestTextContains.isNotEmpty()) {
             //return res near textContainsSelector(nearestTextContains)
-            return res[textContainsSelector(nearestText).preceding()]
+            res = res[textContainsSelector(nearestText).preceding()]
         }
 
         return res

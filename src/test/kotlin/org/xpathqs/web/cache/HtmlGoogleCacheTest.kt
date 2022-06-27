@@ -4,11 +4,9 @@ import assertk.assertAll
 import assertk.assertThat
 import assertk.assertions.isEqualTo
 import org.junit.jupiter.api.Test
-import org.xpathqs.core.selector.extensions.withAttributeValue
 import org.xpathqs.web.constants.Global
 import org.xpathqs.web.constants.WebCachedHtml
-import org.xpathqs.web.factory.HTML
-import org.xpathqs.web.factory.HtmlTags
+
 
 internal class HtmlGoogleCacheTest {
 
