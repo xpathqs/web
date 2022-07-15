@@ -1627,6 +1627,9 @@ object HTML {
 
         nearestText: String = "",
         nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = ""
     ): Selector {
         var res = SecretInput(props = SelectorProps(tag = tag))
 
@@ -1702,6 +1705,12 @@ object HTML {
             res = res[textContainsSelector(nearestText).preceding()]
         }
 
+        if (testId.isNotEmpty()) {
+            res = res.arg("@data-testid", testId)
+        }
+        if (testIdContains.isNotEmpty()) {
+            res = res.arg("@data-testid", testIdContains, contains = true)
+        }
         return res
     }
 

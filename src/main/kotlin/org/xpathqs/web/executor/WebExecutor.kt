@@ -5,6 +5,8 @@ import org.xpathqs.driver.actions.*
 import org.xpathqs.driver.executor.ActionExecMap
 import org.xpathqs.driver.executor.Decorator
 import org.xpathqs.driver.executor.IExecutor
+import org.xpathqs.driver.extensions.screenshot
+import org.xpathqs.driver.log.Log
 import org.xpathqs.driver.navigation.base.ILoadable
 import org.xpathqs.web.WebPage
 import org.xpathqs.web.actions.OpenUrlAction
@@ -53,10 +55,14 @@ open class WebExecutor(
     }
 
     protected open fun executeAction(action: InputAction) {
-        if (action.clearBeforeInput) {
-            driver.clear(action.on)
+        Log.step(action.toStyledString()) {
+            action.on.screenshot()
+
+            if (action.clearBeforeInput) {
+                driver.clear(action.on)
+            }
+            driver.input(action.on, action.text)
         }
-        driver.input(action.on, action.text)
     }
 
     protected open fun executeAction(action: OpenUrlAction) {
