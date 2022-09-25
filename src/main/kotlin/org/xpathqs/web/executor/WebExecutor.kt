@@ -56,12 +56,12 @@ open class WebExecutor(
 
     protected open fun executeAction(action: InputAction) {
         Log.step(action.toStyledString()) {
-            action.on.screenshot()
-
             if (action.clearBeforeInput) {
                 driver.clear(action.on)
             }
             driver.input(action.on, action.text)
+
+            action.on.screenshot()
         }
     }
 

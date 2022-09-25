@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 version = "0.1.3"
 
 plugins {
-    kotlin("jvm") version "1.5.0"
+    kotlin("jvm") version "1.6.0"
     id("org.jetbrains.dokka") version "1.4.32"
     `java-library`
     jacoco
@@ -91,7 +91,7 @@ publishing {
 }
 
 signing {
-    sign(publishing.publications["mavenJava"])
+//    sign(publishing.publications["mavenJava"])
 }
 
 tasks.test {

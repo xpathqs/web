@@ -1185,7 +1185,10 @@ object HTML {
         clsContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = "",
     ) = tag(
         tag = "sup",
 
@@ -1206,6 +1209,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun textarea(
@@ -1233,7 +1239,10 @@ object HTML {
         valueContains: String = "",
 
         nearestText: String = "",
-        nearestTextContains: String = ""
+        nearestTextContains: String = "",
+
+        testId: String = "",
+        testIdContains: String = "",
     ) = tag(
         tag = "textarea",
 
@@ -1262,6 +1271,9 @@ object HTML {
 
         nearestText = nearestText,
         nearestTextContains = nearestTextContains,
+
+        testId = testId,
+        testIdContains = testIdContains,
     )
 
     fun select(

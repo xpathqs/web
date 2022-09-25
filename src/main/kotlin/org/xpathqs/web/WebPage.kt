@@ -14,7 +14,9 @@ open class WebPage(
     base = base,
     title = title
 ) {
-    fun open() {
-        Global.executor.execute(OpenUrlAction(this))
+    open fun open() {
+        Global.executor.execute(
+            OpenUrlAction(this)
+        )
     }
 }
