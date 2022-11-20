@@ -21,6 +21,7 @@ class HtmlCache : XmlCache() {
         this.xml = xml
 
         val parser = DOMParser()
+        parser.setFeature("http://xml.org/sax/features/namespaces", false)
 
         parser.parse(InputSource(StringReader(xml)))
         doc = parser.document
