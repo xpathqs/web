@@ -1,13 +1,13 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-version = "0.1.3"
+version = "0.1.7"
 
 plugins {
-    kotlin("jvm") version "1.6.0"
+    kotlin("jvm") version "1.9.20"
     id("org.jetbrains.dokka") version "1.4.32"
     `java-library`
     jacoco
-    maven
+  //  maven
     `maven-publish`
     signing
 }
@@ -29,9 +29,7 @@ repositories {
 }
 
 dependencies {
-    api("org.xpathqs:core:0.1.3")
-    api("org.xpathqs:driver:0.1.3")
-    api("org.xpathqs:log:0.1.2")
+    api("org.xpathqs:driver:0.1.8")
 
     implementation(kotlin("stdlib"))
     implementation("net.sourceforge.nekohtml:nekohtml:1.9.22")

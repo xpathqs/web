@@ -9,7 +9,8 @@ import org.xpathqs.web.constants.Global
 open class WebPage(
     base: ISelector = NullSelector(),
     title: String = "",
-    open val url: String = ""
+    open val url: String = "",
+    open val paramUrl: String = ""
 ): Page(
     base = base,
     title = title

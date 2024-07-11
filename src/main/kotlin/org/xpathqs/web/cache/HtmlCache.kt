@@ -6,7 +6,7 @@ import org.xpathqs.driver.cache.XmlCache
 import org.xpathqs.driver.cache.evaluator.AttributeEvaluator
 import org.xpathqs.driver.cache.evaluator.CacheEvaluator
 import org.xpathqs.driver.cache.evaluator.Evaluator
-import org.xpathqs.driver.log.Log
+import org.xpathqs.log.Log
 import java.io.StringReader
 
 class HtmlCache : XmlCache() {
